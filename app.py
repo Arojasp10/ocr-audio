@@ -116,8 +116,6 @@ with st.sidebar:
           input_language = "zh-cn"
       elif in_lang == "Japones":
           input_language = "ja"
-      elif in_lang == "Portugués":
-          input_language = "pt"
       
       out_lang = st.selectbox(
           "Select your output language",
@@ -135,8 +133,6 @@ with st.sidebar:
           output_language = "zh-cn"
       elif out_lang == "Japones":
           output_language = "ja"
-      elif in_lang == "Portugués":
-          input_language = "pt"
       
       english_accent = st.selectbox(
           "Seleccione el acento",
