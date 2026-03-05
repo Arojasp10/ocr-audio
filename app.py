@@ -43,7 +43,7 @@ remove_files(7)
 
 
 
-st.title("Reconocimiento Óptico de Caracteres")
+st.title("Reconocimiento Óptico de Caracteres y transcripción de audio")
 st.subheader("Elige la fuente de la imágen, esta puede venir de la cámara o cargando un archivo")
 
 cam_ = st.checkbox("Usar Cámara")
@@ -102,7 +102,7 @@ with st.sidebar:
       #text = st.text_input("Enter text")
       in_lang = st.selectbox(
           "Seleccione el lenguaje de entrada",
-          ("Ingles", "Español", "Bengali", "koreano", "Mandarin", "Japones"),
+          ("Ingles", "Español", "Bengali", "koreano", "Mandarin", "Japones", "Portugués"),
       )
       if in_lang == "Ingles":
           input_language = "en"
@@ -116,10 +116,12 @@ with st.sidebar:
           input_language = "zh-cn"
       elif in_lang == "Japones":
           input_language = "ja"
+      elif in_lang == "Portugués":
+          input_language = "pt"
       
       out_lang = st.selectbox(
           "Select your output language",
-          ("Ingles", "Español", "Bengali", "koreano", "Mandarin", "Japones"),
+          ("Ingles", "Español", "Bengali", "koreano", "Mandarin", "Japones", "Portuguez"),
       )
       if out_lang == "Ingles":
           output_language = "en"
@@ -133,6 +135,8 @@ with st.sidebar:
           output_language = "zh-cn"
       elif out_lang == "Japones":
           output_language = "ja"
+      elif in_lang == "Portugués":
+          input_language = "pt"
       
       english_accent = st.selectbox(
           "Seleccione el acento",
